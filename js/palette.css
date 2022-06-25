@@ -1,0 +1,32 @@
+.background {
+  background-color: var(--background);
+}
+.foreground {
+  color: var(--foreground);
+}
+.cursor {
+  color: var(--cursorColor);
+}
+
+/* Defaults for UI */
+:root {
+  --background: #090909;
+  --foreground: #fef638;
+  --cursorColor: rgba(254, 246, 232, 0.5);
+  --color0: #1d1f21;
+  --color1: #cc3311;
+  --color2: #009988;
+  --color3: #ee7733;
+  --color4: #0077bb;
+  --color5: #ee3377;
+  --color6: #33bbee;
+  --color7: #dddddd;
+  --color8: #bbbbbb;
+  --color9: #ee6677;
+  --color10: #228833;
+  --color11: #ccbb44;
+  --color12: #4477aa;
+  --color13: #aa3377;
+  --color14: #66ccee;
+  --color15: #ffffff;
+}

@@ -1,0 +1,11 @@
+:root {
+  --font-family: "IBM VGA9";
+  --font-size: 16px;
+  --cell-width: 9px;
+  --cell-height: 15px;
+  --cell-line-height: 1;
+}
+@font-face {
+  font-family: "IBM VGA9";
+  src: url("PxPlus_IBM_VGA9.ttf");
+}

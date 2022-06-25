@@ -1,0 +1,16 @@
+:root {
+  --font-family: fixed, "MiscFixed-6x13";
+  --font-size: 12px;
+  --cell-width: 6px;
+  --cell-height: 12px;
+  --cell-line-height: 1;
+}
+@font-face {
+  font-family: "MiscFixed-6x13";
+  src: url("MiscFixedSemiCondensed-6x13.ttf");
+}
+@font-face {
+  font-family: "MiscFixed-6x13";
+  src: url("MiscFixedBold-6x13.ttf");
+  font-weight: bold;
+}

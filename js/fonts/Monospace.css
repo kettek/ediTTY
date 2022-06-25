@@ -1,0 +1,7 @@
+:root {
+  --font-family: monospace;
+  --font-size: 16pt;
+  --cell-width: 9pt;
+  --cell-height: 16pt;
+  --cell-line-height: 1;
+}

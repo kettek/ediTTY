@@ -1,0 +1,252 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+  font-family: fixed, monospace;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1vw;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+body {
+  height: 100%;
+}
+input, select, button {
+  font-size: 1vw;
+  text-align: center;
+  border: 0;
+}
+body {
+  margin: 0;
+  display: flex;
+}
+.frow {
+  display: flex;
+}
+.fcols {
+  display: flex;
+  flex-direction: column;
+}
+
+section.editTTY {
+  flex-direction: row;
+  flex: 1;
+}
+.View {
+  box-sizing: content-box;
+  background: var(--background);
+  border: var(--foreground) solid red;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+/*  min-width: calc(var(--cell-width)*80);
+  height: calc(var(--cell-height)*24);*/
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border-right: 2px solid var(--color5);
+  border-bottom: 2px solid var(--color5);
+}
+.ViewAndTools {
+  flex: 1;
+  min-width: 50vw;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-right: 2px solid var(--color6);
+}
+.Tools {
+}
+.Tool-Subs {
+  margin: 0.5em;
+}
+section.Status {
+  background-color: var(--background);
+  color: var(--color6);
+  border-top: 2px solid var(--color6);
+}
+section.Status input {
+  background-color: var(--color0);
+  color: var(--color5);
+  border-bottom: 2px solid var(--color5);
+}
+section.Status > * {
+  padding: 2px;
+  margin: 1px;
+}
+section.Controls {
+  flex: 1;
+}
+section h1 {
+  margin: .25em .25em .25em .25em;
+  color: var(--color6);
+  font-size: 125%;
+}
+section article {
+  margin-bottom: .5em;
+  margin-left: .75em;
+}
+section label.checkbox {
+  color: var(--color6);
+  margin: 0 .25em;
+  display: inline-flex;
+}
+section label.checkbox input {
+  display: none;
+}
+section label.checkbox input:checked ~ span {
+  background-color: var(--color6);
+}
+section label.checkbox span {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  margin: 0 .25em;
+  border: 2px solid var(--color6);
+  border-radius: 1em;
+  transition: all .5s;
+}
+
+.Controls-Mode {
+  display: flex;
+}
+.Controls-RunesSelector {
+  overflow: auto;
+}
+.Controls-PaletteSelector {
+  flex: 1;
+  overflow: auto;
+}
+.IO {
+  flex: 1;
+}
+.IO textarea {
+  color: var(--foreground);
+  background-color: var(--background);
+  flex: 1;
+  font-size: 8pt;
+}
+
+section.CellsView {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+.CellsView .cell {
+  box-sizing: content-box;
+  padding: .1em;
+
+  display: inline-flex;
+  justify-content: center;
+  transition: all .250s ease;
+
+  width: var(--cell-width);
+  height: var(--cell-height);
+  line-height: var(--cell-line-height);
+}
+.CellsView input {
+  display: none;
+}
+.CellsView .cell span {
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  white-space: pre;
+  align-items: center;
+  justify-content: center;
+}
+.CellsView .cell input:checked ~ span {
+  border: 2px solid var(--cursorColor);
+}
+
+.row {
+  display: flex;
+  transition: all .5s;
+}
+.cell {
+  display: flex;
+  flex:1;
+  width: var(--cell-width);
+  transition: all .1s;
+  box-sizing: content-box;
+}
+.cell.hover {
+  background-color: var(--cursorColor);
+  transition: all 0.05s ease;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 2px solid var(--color6);
+  background-color: var(--color0);
+}
+.tab {
+  padding: .5em;
+  border-right: 2px solid var(--color6);
+  color: var(--color6);
+  cursor: pointer;
+}
+.tab.selected {
+  background-color: var(--color6);
+  color: var(--color0);
+}
+.tabContent {
+  flex: 1;
+}
+
+select {
+  color: var(--color6);
+  padding: .25em;
+  margin: .25em;
+  background-color: var(--color0);
+  border: 0;
+  border-bottom: 2px solid var(--color6);
+}
+
+.button {
+  position: relative;
+  text-align: center;
+  border: 2px solid var(--color0);
+  border-bottom: 2px solid var(--color6);
+  background-color: var(--color0);
+  color: var(--color6);
+  margin: .5em;
+  padding: .5em 1em;
+  cursor: pointer;
+}
+.button.selected {
+  color: var(--color0);
+  background-color: var(--color6);
+  border: 2px solid var(--color6);
+  border-bottom: 2px solid var(--color0);
+}
+.mini-button {
+  text-align: center;
+  border: 2px solid var(--color0);
+  background-color: var(--color0);
+  border-bottom: 2px solid var(--color5);
+  color: var(--color5);
+  margin: .25em;
+  padding: .25em;
+  cursor: pointer;
+}
+.mini-button.selected {
+  color: var(--color0);
+  background-color: var(--color5);
+  border: 2px solid var(--color5);
+  border-bottom: 2px solid var(--color0);
+}
+.mini-button img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.TextInput {
+  position: absolute;
+  width: 0;
+  border: 0;
+  left: 0;
+  top: 0;
+}
