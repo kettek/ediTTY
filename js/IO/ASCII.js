@@ -1,4 +1,4 @@
-let ANSI = {
+let ASCII = {
   name: "ASCII",
   desc: "Export using plain ASCII.",
   export: rows => {
@@ -19,4 +19,4 @@ let ANSI = {
   }
 }
 
-export { ANSI }
+export { ASCII }

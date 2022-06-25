@@ -1,4 +1,5 @@
 import { Lang } from './Lang.js'
+import { ASCII } from './IO/ASCII.js'
 import { ANSI } from './IO/ANSI.js'
 import { IOJSON } from './IO/JSON.js'
 import { state } from './state.js'
@@ -65,6 +66,9 @@ let IO = {
             }, tech.name)
           })),
           m('.button', {
+            onclick: () => {
+              let result = IO.list[state.selectedSave].import(vnode.state.cached)
+            }
           }, Lang.get('Import')),
         ])
       }
@@ -72,6 +76,7 @@ let IO = {
   }
 }
 
+IO.add(ASCII)
 IO.add(ANSI)
 IO.add(IOJSON)
 
