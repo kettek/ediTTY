@@ -125,7 +125,6 @@ let View = {
         View.rows[y].splice(w)
       }
     }
-    console.log(View.rows)
     View.SyncDOMSize()
   },
   setHeight: (h) => {

@@ -55,7 +55,11 @@ let IO = {
         return m('section.IO.fcols', [
           m('.button', {
           }, Lang.get('Open')),
-          m('textarea', vnode.state.cached),
+          m('textarea', {
+            onchange: (e) => {
+              vnode.state.cached = e.target.value
+            }
+          }, vnode.state.cached),
           m('select', {
             onchange: (e) => {
               state.selectedLoad = e.target.selectedIndex
@@ -68,6 +72,14 @@ let IO = {
           m('.button', {
             onclick: () => {
               let result = IO.list[state.selectedSave].import(vnode.state.cached)
+              View.setWidth(result.width)
+              View.setHeight(result.height)
+              View.clearCells()
+              for (let y = 0; y < result.rows.length; y++) {
+                for (let x = 0; x < result.rows[y].length; x++) {
+                  View.setCell(x, y, result.rows[y][x].fg, result.rows[y][x].bg, result.rows[y][x].ch)
+                }
+              }
             }
           }, Lang.get('Import')),
         ])

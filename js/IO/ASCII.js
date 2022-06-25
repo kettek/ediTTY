@@ -15,7 +15,31 @@ let ASCII = {
     return out
   },
   import: data => {
-    console.log(data)
+    let rows = data.split('\n')
+    let rs = []
+    let width = 0
+    let height = 0
+    for (let row of rows) {
+      let r = []
+      for (let x = 0; x < row.length; x++) {
+        let c = row[x]
+        r.push({
+          ch: c == ' ' ? '&nbsp;' : c,
+          fg: null,
+          bg: null,
+        })
+        if (width < x+1) {
+          width = x+1
+        }
+      }
+      rs.push(r)
+      height++
+    }
+    return {
+      rows: rs,
+      width: width,
+      height: height,
+    }
   }
 }
 
